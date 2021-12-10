@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	.login{
+		width:350px;
+		height:200px;
+		position:absolute;
+		left:50%;
+		top:50%;
+		margin-left:-150px;
+		margin-top:-100px;
+}
+</style>
+	<title>Entrance</title>
+</head>
+<body>
+<div class="login">
+<label>Password</label><br>
+<input id="password" type="password"><br>
+<button onclick="myFunction()">Start</button>
+</div>
+<script>
+function myFunction(){
+  var i,j;
+i="LuLiangchidapao";
+j=document.getElementById("password").value;
+if(j==i){location.href="LLCDP.github.io/SKTcenter/problems";}
+else{alert("Password Failed!Please Input Again!");}
+}
+</script>
+
+</body>
+</html>
