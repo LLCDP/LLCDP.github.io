@@ -2,6 +2,47 @@
 <html>
     <head>
         <title>思考题大赛-中心</title>
+        <link rel="shortcut icon" href="sign.ico">
+        <style type="text/css">
+            a:link{color:#5555FF;text-decoration:none}
+            a:hover{color:#9999FF;text-decoration:none}
+            a:visited{color:#5555FF;text-decoration:none}
+            a:active{color:#cc55cc;text-decoration:none}
+            body{background-color:#EEEEEE}
+            td{width:150px;}
+        </style>
+    </head>
+    <body>
+        <h2>目前的所有思考题大赛:</h2>
+        <table border="1" bordercolor="#EEEEEE" bgcolor="#EEEEEE">
+            <tr align="center">
+                <td>编号</td>
+                <td>起始时间</td>
+                <td>结束时间</td>
+                <td>状态</td>
+                <td>下载试题</td>
+                <td>下载答案</td>
+            </tr>
+            <tr align="center">
+                <td>1</td>
+                <td>2021.12.1</td>
+                <td>2022.1.12</td>
+                <td><font color="green">进行中</font></td>
+                <td><a href="1.pdf" download="SKTMO1.pdf">下载</a></td>
+                <td><font color="gray">下载</font></td>
+            </tr>
+            <tr align="center">
+                <td>2</td>
+                <td>2022.1.20</td>
+                <td>2022.2.2</td>
+                <td><font color="blue">未开始</font></td>
+                <td><font color="gray">下载</font></td>
+                <td><font color="gray">下载</font></td>
+            </tr>
+        </table>
+        <h2>by-SKTMO委员会&老卢炝饼店</h2>
+        <img src="sign.jpg" height=200px>
+        <p></p>
         <script language=JavaScript>
             //<!--
             var caution = false
@@ -50,12 +91,8 @@
             else
             visits = parseInt(visits) + 1
             setCookie("counter", visits, now)
-            document.write("你已经访问本网站" + visits + "次了" )
+            document.write("您已经访问本页面" + visits + "次了")
             // -->
-        </script>
-    </head>
-    <body>
-        <h2>目前的所有思考题大赛:</h2>
-        <p><a href="SKTMO1/">第1届</a></p>
+            </script>
     </body>
 </html>
