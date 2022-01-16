@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>思考题大赛-中心</title>
+        <link rel="shortcut icon" href="sign.ico">
+        <style type="text/css">
+            a:link{color:#5555FF;text-decoration:none}
+            a:hover{color:#9999FF;text-decoration:none}
+            a:visited{color:#5555FF;text-decoration:none}
+            a:active{color:#cc55cc;text-decoration:none}
+            body{background-color:#EEEEEE}
+            td{width:180px;}
+        </style>
+    </head>
+    <body>
+        <h2>目前的所有思考题大赛:</h2>
+        <table border="1" bordercolor="#EEEEEE" bgcolor="#EEEEEE">
+            <tr align="center">
+                <td>编号</td>
+                <td>起始时间</td>
+                <td>结束时间</td>
+                <td>状态</td>
+                <td>下载试题</td>
+                <td>下载答案</td>
+            </tr>
+            <tr align="center">
+                <td>1</td>
+                <td>2021.12.1</td>
+                <td>2022.1.12</td>
+                <td><font color="blue">写答案中</font></td>
+                <td><a href="1.pdf" download="SKTMO1.pdf">下载</a></td>
+                <td><font color="gray">下载</font></td>
+            </tr>
+            <tr align="center">
+                <td>2</td>
+                <td>2022.1.15</td>
+                <td>2022.2.2</td>
+                <td><font color="green">进行中</font></td>
+                <td><a href="2.pdf" download="SKTMO2.pdf">下载</a></td>
+                <td><font color="gray">下载</font></td>
+            </tr>
+        </table>
+        <p><h2>结果</h2></p>
+        <p></p>
+        <table>
+            <tr align="center">
+                <td>编号</td>
+                <td>答卷数量</td>
+                <td>P1均分</td>
+                <td>P2均分</td>
+                <td>P3均分</td>
+                <td>P4均分</td>
+            </tr>
+            <tr align="center">
+                <td>1</td>
+                <td>2</td>
+                <td>22.5</td>
+                <td>5</td>
+                <td>20</td>
+                <td>45</td>
+            </tr>
+        </table>
+        <h2>by-SKTMO委员会</h2>
+        <img src="sign.jpg" height=200px>
+        <p></p>
+        <script language=JavaScript>
+            //<!--
+            var caution = false
+            function setCookie(name, value, expires, path, domain, secure) {
+            var curCookie = name + "=" + escape(value) +
+            ((expires) ? "; expires=" + expires.toGMTString() : "") +
+            ((path) ? "; path=" + path : "") +
+            ((domain) ? "; domain=" + domain : "") +
+            ((secure) ? "; secure" : "")
+            if (!caution || (name + "=" + escape(value)).length <= 4000)
+            document.cookie = curCookie
+            else
+            if (confirm("Cookie exceeds 4KB and will be cut!"))
+            document.cookie = curCookie
+            }
+            function getCookie(name) {
+            var prefix = name + "="
+            var cookieStartIndex = document.cookie.indexOf(prefix)
+            if (cookieStartIndex == -1)
+            return null
+            var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length)
+            if (cookieEndIndex == -1)
+            cookieEndIndex = document.cookie.length
+            return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex))
+            }
+            function deleteCookie(name, path, domain) {
+            if (getCookie(name)) {
+            document.cookie = name + "=" +
+            ((path) ? "; path=" + path : "") +
+            ((domain) ? "; domain=" + domain : "") +
+            "; expires=Thu, 01-Jan-70 00:00:01 GMT"
+            }
+            }
+            function fixDate(date) {
+            var base = new Date(0)
+            var skew = base.getTime()
+            if (skew > 0)
+            date.setTime(date.getTime() - skew)
+            }
+            var now = new Date()
+            fixDate(now)
+            now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000)
+            var visits = getCookie("counter")
+            if (!visits)
+            visits = 1
+            else
+            visits = parseInt(visits) + 1
+            setCookie("counter", visits, now)
+            document.write("您已经访问本页面" + visits + "次了")
+            // -->
+            </script>
+    </body>
+</html>
