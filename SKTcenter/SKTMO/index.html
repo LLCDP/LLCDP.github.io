@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<!--
+    你声明的语言是HTML5，HTML5撤销了对像font,bgcolor,align这些直接在开始开始标签里写的CSS属性
+    所以建议全部写到style里，或者在开始标签中用style="property: value;"这样的格式
+    我帮你全部改好了
+!-->
 <html>
     <head>
         <title>思考题大赛-中心</title>
@@ -10,12 +15,15 @@
             a:active{color:#cc55cc;text-decoration:none}
             body{background-color:#EEEEEE}
             td{width:180px;}
+            tr{
+                align-self: center;
+            }
         </style>
     </head>
     <body>
         <h2>目前的所有思考题大赛:</h2>
         <table border="1" bordercolor="#EEEEEE" bgcolor="#EEEEEE">
-            <tr align="center">
+            <tr>
                 <td>编号</td>
                 <td>起始时间</td>
                 <td>结束时间</td>
@@ -23,7 +31,7 @@
                 <td>下载试题</td>
                 <td>下载答案</td>
             </tr>
-            <tr align="center">
+            <tr>
                 <td>1</td>
                 <td>2021.12.1</td>
                 <td>2022.1.12</td>
@@ -31,7 +39,7 @@
                 <td><a href="1.pdf" download="SKTMO1.pdf">下载</a></td>
                 <td><font color="gray">下载</font></td>
             </tr>
-            <tr align="center">
+            <tr>
                 <td>2</td>
                 <td>2022.1.15</td>
                 <td>2022.2.2</td>
@@ -43,7 +51,7 @@
         <p><h2>结果</h2></p>
         <p></p>
         <table>
-            <tr align="center">
+            <tr>
                 <td>编号</td>
                 <td>答卷数量</td>
                 <td>P1均分</td>
@@ -51,7 +59,7 @@
                 <td>P3均分</td>
                 <td>P4均分</td>
             </tr>
-            <tr align="center">
+            <tr>
                 <td>1</td>
                 <td>2</td>
                 <td>22.5</td>
@@ -61,7 +69,7 @@
             </tr>
         </table>
         <h2>by-SKTMO委员会</h2>
-        <img src="sign.jpg" height=200px>
+        <img src="sign.ico" height=200px>
         <p></p>
         <script language=JavaScript>
             //<!--
