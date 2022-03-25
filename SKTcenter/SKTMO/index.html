@@ -1,55 +1,70 @@
 <!DOCTYPE html>
 <!--
-    你声明的语言是HTML5，HTML5撤销了对像font,bgcolor,align这些直接在开始开始标签里写的CSS属性
-    所以建议全部写到style里，或者在开始标签中用style="property: value;"这样的格式
+    你声明的语言是HTML5，HTML5撤销了对像bgcolor,align这些直接在开始开始标签里写的CSS属性
+    而且已经不太支持使用font标签
+    所以建议全部写到head的style里，或者在开始标签中用style="property: value;"这样的格式
     我帮你全部改好了
+    为了解决以后更多的SKTMO，我设了几个类
 !-->
 <html>
     <head>
         <title>思考题大赛-中心</title>
         <link rel="shortcut icon" href="sign.ico">
         <style type="text/css">
+
             a:link{color:#5555FF;text-decoration:none}
             a:hover{color:#9999FF;text-decoration:none}
             a:visited{color:#5555FF;text-decoration:none}
             a:active{color:#cc55cc;text-decoration:none}
             body{background-color:#EEEEEE}
             td{width:180px;}
-            tr{
-                align-self: center;
+
+            .anwsering {
+                color: #0000FF;
+            }
+
+            .down_no{
+                color: #808080;
+            }
+
+            .going{
+                color: #008000;
+            }
+            tr td,th{
+                text-align: center;
+                vertical-align: middle;
             }
         </style>
     </head>
     <body>
         <h2>目前的所有思考题大赛:</h2>
-        <table border="1" bordercolor="#EEEEEE" bgcolor="#EEEEEE">
+        <table style="border-width: 10px; border-color: #111111;background-color: #DDDDDD;">
             <tr>
-                <td>编号</td>
-                <td>起始时间</td>
-                <td>结束时间</td>
-                <td>状态</td>
-                <td>下载试题</td>
-                <td>下载答案</td>
+                <th>编号</th>
+                <th>起始时间</th>
+                <th>结束时间</th>
+                <th>状态</th>
+                <th>下载试题</th>
+                <th>下载答案</th>
             </tr>
             <tr>
                 <td>1</td>
                 <td>2021.12.1</td>
                 <td>2022.1.12</td>
-                <td><font color="blue">写答案中</font></td>
+                <td class="answering">写答案中</td>
                 <td><a href="1.pdf" download="SKTMO1.pdf">下载</a></td>
-                <td><font color="gray">下载</font></td>
+                <td class="down_no">下载</td>
             </tr>
             <tr>
                 <td>2</td>
                 <td>2022.1.15</td>
                 <td>2022.2.2</td>
-                <td><font color="green">进行中</font></td>
+                <td class="going_on">进行中</td>
                 <td><a href="2.pdf" download="SKTMO2.pdf">下载</a></td>
-                <td><font color="gray">下载</font></td>
+                <td class="down_no">下载</td>
             </tr>
         </table>
         <p><h2>结果</h2></p>
-        <p></p>
         <table>
             <tr>
                 <td>编号</td>
@@ -69,10 +84,9 @@
             </tr>
         </table>
         <h2>by-SKTMO委员会</h2>
-        <img src="sign.ico" height=200px>
-        <p></p>
+        <img src="sign.ico" style="height: 200px;"><br/>
         <script language=JavaScript>
-            //<!--
+            //<!--JSNB
             var caution = false
             function setCookie(name, value, expires, path, domain, secure) {
             var curCookie = name + "=" + escape(value) +
@@ -120,7 +134,8 @@
             visits = parseInt(visits) + 1
             setCookie("counter", visits, now)
             document.write("您已经访问本页面" + visits + "次了")
-            // -->
+            //我无话可说 -->
             </script>
+
     </body>
 </html>
