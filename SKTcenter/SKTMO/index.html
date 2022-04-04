@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
 <!--
     你声明的语言是HTML5，HTML5撤销了对像bgcolor,align这些直接在开始开始标签里写的CSS属性
     而且已经不太支持使用font标签
@@ -6,58 +8,14 @@
     我帮你全部改好了
     为了解决以后更多的SKTMO，我设了几个类
 !-->
-<html>
+<html lang="zh-cn">
+
     <head>
         <title>思考题大赛-中心</title>
-        <link rel="shortcut icon" href="sign.ico">
-        <style type="text/css">
-
-            table{
-                border: 0.2em solid #111111;
-                background-color: #FFFFFF;
-                margin-bottom: 1em;
-                border-radius: 0.5em;
-            }
-
-            table caption{
-                text-align: left;
-                font-size: 2em;
-                font-weight: bold;
-                line-height: 2em;
-            }
-
-            td a:link{color:#5555FF;text-decoration:none}
-            td a:hover{color:#9999FF;text-decoration:none}
-            td a:visited{color:#5555FF;text-decoration:none}
-            td a:active{color:#cc55cc;text-decoration:none}
-            body{
-                background-color:#EEEEEE;
-                margin:1% 2%;
-            }
-            td,th{width: 6.25em;}
-
-            .answering {
-                color: #0000FF;
-            }
-
-            .downloadNone{
-                color: #808080;
-            }
-
-            .goingOn{
-                color: #008000;
-            }
-
-            td,th{
-                text-align: center;
-                vertical-align: middle;
-                font-size: 1.25em;
-                border: 0.1em solid #111111;
-                border-radius: 0.2em;
-            }
-
-        </style>
+        <link rel="shortcut icon" href="./images/sign.ico" />
+        <link rel="stylesheet" href="./styles/home.css">
     </head>
+
     <body>
         <table>
             <caption>目前的所有思考题大赛:</caption>
@@ -74,7 +32,13 @@
                 <td>2021.12.1</td>
                 <td>2022.1.12</td>
                 <td class="answering">写答案中</td>
-                <td><a href="1.pdf" download="SKTMO1.pdf">下载</a></td>
+                <!--
+                    a标签的download属性不被IE和iOS版本<13的Safari支持
+                    而我的iPad是iOS10……
+                    现在还有很多人用IE
+                    特别是我们班这种设备比较辣鸡的
+                -->
+                <td><a href="./files/SKTMO1.pdf">下载</a></td>
                 <td class="downloadNone">下载</td>
             </tr>
             <tr>
@@ -82,7 +46,7 @@
                 <td>2022.1.15</td>
                 <td>2022.2.2</td>
                 <td class="goingOn">进行中</td>
-                <td><a href="2.pdf" download="SKTMO2.pdf">下载</a></td>
+                <td><a href="./files/SKTMO2.pdf">下载</a></td>
                 <td class="downloadNone">下载</td>
             </tr>
         </table>
@@ -106,64 +70,10 @@
             </tr>
         </table>
         <h1 style="font-size: 1em;line-height: 1em;">by-SKTMO委员会</h1>
-        <img src="sign.ico" style="height: 12.5em;border-radius: 1.25em;"><br/>
-        <script language=JavaScript>
-            //<!--JSNB 但是我帮你格式化了一下
-            var caution = false
-            function setCookie(name, value, expires, path, domain, secure) 
-            {
-                var curCookie = 
-                    name + "=" + escape(value) +
-                    ((expires) ? "; expires=" + expires.toGMTString() : "") + 
-                    ((path) ? "; path=" + path : "") +
-                    ((domain) ? "; domain=" + domain : "") + 
-                    ((secure) ? "; secure" : "");
-                if (!caution || (name + "=" + escape(value)).length <= 4000)
-                    document.cookie = curCookie;
-                else
-                    if (confirm("Cookie exceeds 4KB and will be cut!"))
-                        document.cookie = curCookie;
-            }
-            function getCookie(name) 
-            {
-                var prefix = name + "=";
-                var cookieStartIndex = document.cookie.indexOf(prefix);
-                if (cookieStartIndex == -1)
-                    return null;
-                var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length);
-                if (cookieEndIndex == -1)
-                    cookieEndIndex = document.cookie.length;
-                return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex));
-            }
-            function deleteCookie(name, path, domain) 
-            {
-                if (getCookie(name)) 
-                {
-                    document.cookie = name + "=" +
-                    ((path) ? "; path=" + path : "") +
-                    ((domain) ? "; domain=" + domain : "") +
-                    "; expires=Thu, 01-Jan-70 00:00:01 GMT";
-                }
-            }
-            function fixDate(date) 
-            {
-                var base = new Date(0);
-                var skew = base.getTime();
-                if (skew > 0)
-                    date.setTime(date.getTime() - skew);
-            }
-            var now = new Date();
-            fixDate(now);
-            now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
-            var visits = getCookie("counter");
-            if (!visits)
-                visits = 1;
-            else
-                visits = parseInt(visits) + 1;
-            setCookie("counter", visits, now);
-            document.write("您已经访问本页面" + visits + "次了");
-            //我无话可说 -->
-            </script>
+        <img src="./images/sign.ico" style="height: 12.5em;border-radius: 1.25em;" alt="SKTMO Sign" title="The Sign of SKTMO" /><br/>
+        <script type="text/javascript" src="./scripts/visitsCalc.js"></script>
+        <!--外联JS-->
 
     </body>
+
 </html>

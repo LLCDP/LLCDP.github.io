@@ -1,0 +1,65 @@
+body {
+    font-size: 16px;
+    background-color: #EEEEEE;
+    margin: 1% 2%;
+}
+
+table {
+    border: 0.2em solid #111111;
+    background-color: #FFFFFF;
+    margin-bottom: 1em;
+    border-radius: 0.5em;
+}
+
+table caption {
+    text-align: left;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 2em;
+}
+
+td a:link {
+    color: #5555FF;
+    text-decoration: none
+}
+
+td a:hover {
+    color: #9999FF;
+    text-decoration: none
+}
+
+td a:visited {
+    color: #5555FF;
+    text-decoration: none
+}
+
+td a:active {
+    color: #cc55cc;
+    text-decoration: none
+}
+
+td,
+th {
+    width: 6.25em;
+}
+
+.answering {
+    color: #0000FF;
+}
+
+.downloadNone {
+    color: #808080;
+}
+
+.goingOn {
+    color: #008000;
+}
+
+td,
+th {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.25em;
+    border: 0.1em solid #111111;
+    border-radius: 0.2em;
+}
